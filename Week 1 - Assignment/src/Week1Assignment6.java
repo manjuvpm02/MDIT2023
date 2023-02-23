@@ -7,36 +7,36 @@ public class Week1Assignment6 {
 		
 		System.out.print("How much money do you need to retire? ");
 		
-		Scanner x = new Scanner(System.in);
-		int FinalAmount = x.nextInt();
+		Scanner in = new Scanner(System.in);
+		int finalAmount = in.nextInt();
 		
 		
 		System.out.print("How much money will you contribute every year? ");
-		int investannum = x.nextInt();
+		int investAnnum = in.nextInt();
 		
 		
 		System.out.print("Interest rate in %: ");
-		int rate = x.nextInt();
+		int rate = in.nextInt();
 		
-		int i=0,amt;
+		int year=0,amt;
 		
-		amt=investannum;
+		amt=investAnnum;
 		
 		
 		do{
 			
-			amt= investannum+amt+(amt*rate*1/100);
+			amt= investAnnum+amt+(amt*rate*1/100);
 			
-			i++;
+			year++;
 			
-		}while(amt<FinalAmount);
+		}while(amt<finalAmount);
 		
 				//System.out.println("Amount is"+amt);
 		
-		System.out.println("You can retire in " + i + " years.");	
+		System.out.println("You can retire in " + year + " years.");	
 		
 		
-		x.close();	
+		in.close();	
 		
 	}
 

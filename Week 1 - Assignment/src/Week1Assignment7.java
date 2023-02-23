@@ -9,16 +9,16 @@ public class Week1Assignment7 {
 		
 		System.out.print("How much money will you contribute every year? ");
 		
-		Scanner x = new Scanner(System.in);
-		double investannum = x.nextInt();
+		Scanner in1 = new Scanner(System.in);
+		double investAnnum = in1.nextInt();
 		
 		
 		System.out.print("Interest rate in %: ");
-		double rate = x.nextInt();
+		double rate = in1.nextInt();
 		
-		Scanner a = new Scanner(System.in); //Used new scanner to resolve a bug, input was showing in console while using the same scanner
+		Scanner in2 = new Scanner(System.in); //Used new scanner to resolve a bug, input was showing in console while using the same scanner
 		
-		double amt=investannum;
+		double amt=investAnnum;
 		int year=0;
 		
 		do {
@@ -31,7 +31,7 @@ public class Week1Assignment7 {
 				
 			System.out.print("Ready to retire? (Y/N)");
 				 
-			choice = a.nextLine();
+			choice = in2.nextLine();
 			
 			choice=choice.toUpperCase();
 			
@@ -44,8 +44,8 @@ public class Week1Assignment7 {
 			System.out.println("Happy Retirement!!");
 		}
 		
-		x.close();
-		a.close();
+		in1.close();
+		in2.close();
 	}
 
 }
