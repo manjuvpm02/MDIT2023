@@ -1,7 +1,7 @@
 package Assignment8;
 
 
-public class Employee {
+public class Employee { 
 	
 	private String name, hireDay;
 	private double salary;

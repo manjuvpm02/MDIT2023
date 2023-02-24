@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Week1Assignment6 {
+public class Week1Assignment6 { 
 	
 	public static void main(String[] args)
 	{
@@ -31,7 +31,7 @@ public class Week1Assignment6 {
 			
 		}while(amt<finalAmount);
 		
-				//System.out.println("Amount is"+amt);
+				//System.out.println("Amount is"+amt)
 		
 		System.out.println("You can retire in " + year + " years.");	
 		

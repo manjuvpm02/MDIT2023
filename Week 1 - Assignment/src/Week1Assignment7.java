@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Week1Assignment7 {
+public class Week1Assignment7 { 
 	
 	public static void main(String[] args)
 	{
