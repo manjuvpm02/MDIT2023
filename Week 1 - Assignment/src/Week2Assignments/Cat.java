@@ -1,6 +1,6 @@
 package Week2Assignments;
 
-public class Cat {
+class Cat {
 	
 	int moodIndex=50;
 	int hungerIndex=50;

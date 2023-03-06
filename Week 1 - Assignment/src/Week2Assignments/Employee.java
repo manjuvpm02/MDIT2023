@@ -1,9 +1,7 @@
 package Week2Assignments;
 
-public class Employee {
+class Employee {
 	
-	static double salary=30000;
-	
-	
+	double salary=30000;	
 
 }
