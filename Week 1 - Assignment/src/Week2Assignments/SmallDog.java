@@ -1,6 +1,6 @@
 package Week2Assignments;
 
-public class SmallDog extends Dog {
+class SmallDog extends Dog {
 
 		public void eat() 
 		{
