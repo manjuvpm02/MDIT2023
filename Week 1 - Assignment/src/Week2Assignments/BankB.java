@@ -1,6 +1,6 @@
 package Week2Assignments;
 
-public class BankB {
+class BankB {
 	
 	public double interestRate(double interest)
 	{

@@ -1,11 +1,10 @@
 package Week2Assignments;
 
-public class BankC {
+class BankC {
 	
 	public double interestRate(double interest)
 	{
 
-		//interest = 10;
 		return interest;
 		
 	}
