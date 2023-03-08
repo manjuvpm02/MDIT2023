@@ -13,3 +13,4 @@ public class Week2Assignment6 extends Addition {
 	}
 
 }
+	
