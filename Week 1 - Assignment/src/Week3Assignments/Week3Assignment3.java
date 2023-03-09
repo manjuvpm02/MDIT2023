@@ -16,17 +16,29 @@ public class Week3Assignment3 {
 		cars.add("Honda City");
 		cars.add("Toyota Fortuner");
 		
-		System.out.println("List of cars:"+cars);
+		System.out.println("List of cars: "+cars);
 		
 		System.out.print("Specify the index from where the string has to be removed: ");	
+		
 		
 		Scanner in = new Scanner(System.in);
 		int indexNo = in.nextInt();
 		
-		String removedCar=cars.remove(indexNo);
+		if(indexNo>=0 && indexNo<cars.size() )
+			
+		{
+			
+			
+			String removedCar=cars.remove(indexNo);
 		
-		System.out.println("String removed from array list: " +removedCar);
-	
+			System.out.println("String removed from array list: " +removedCar);
+		
+			System.out.println("List of cars after removal: "+cars);
+			
+		} else
+			
+			
+			System.out.println("Number out of bound, try again later!");
 		
 		
 		in.close();
