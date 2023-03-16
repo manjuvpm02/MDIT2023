@@ -27,7 +27,10 @@ public class Week4Assignment2 {
         
         driver.get("https://jqueryui.com/selectmenu/"); 
         
-        js.executeScript("window.scrollBy(0,200)");  
+        js.executeScript("window.scrollBy(0,150)");  
+        
+        WebElement dropDownFrame= driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+        driver.switchTo().frame(dropDownFrame);
         
         String xpathForSpeedDropDown = "//select[@id='speed'][@name='speed']";     
         WebElement speedDropDown = driver.findElement(By.xpath(xpathForSpeedDropDown));
