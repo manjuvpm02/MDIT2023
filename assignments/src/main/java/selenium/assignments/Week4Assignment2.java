@@ -1,13 +1,14 @@
 package selenium.assignments;
 
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Week4Assignment2 {
@@ -18,55 +19,60 @@ public class Week4Assignment2 {
 
 		ChromeOptions options=new ChromeOptions();
     	options.addArguments("--remote-allow-origins=*");
-    	options.addArguments("--start-maximized");
-
-       
+    	options.addArguments("--start-maximized"); 
     	WebDriver driver = new ChromeDriver(options);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        
         driver.get("https://jqueryui.com/selectmenu/"); 
-        
         js.executeScript("window.scrollBy(0,150)");  
+
         
-        WebElement dropDownFrame= driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
-        driver.switchTo().frame(dropDownFrame);
+        Actions a = new Actions(driver);
         
-        String xpathForSpeedDropDown = "//select[@id='speed'][@name='speed']";     
+        WebElement demoFrame= driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+        driver.switchTo().frame(demoFrame);
+        
+        String xpathForSpeedDropDown = "(//span[@class='ui-selectmenu-icon ui-icon ui-icon-triangle-1-s'])[1]";     
         WebElement speedDropDown = driver.findElement(By.xpath(xpathForSpeedDropDown));
-        //WebElement speedDropDown = driver.findElement(By.id("speed"));
-
         
-        Select speedOption = new Select(speedDropDown);
-        speedOption.selectByVisibleText("Slow");
-        
-        //List<WebElement> lst = speedOption.getOptions();
-        
-        //System.out.println(lst);
-
+        speedDropDown.click();
+        a.click(speedDropDown);
+        a.sendKeys(Keys.ENTER).build().perform(); 
         
         
-        String xpathForFileDropDown = "//select[@id='files'][@name='files']";     
+        String xpathForFileDropDown = "(//span[@class='ui-selectmenu-icon ui-icon ui-icon-triangle-1-s'])[2]";     
         WebElement fileDropDown = driver.findElement(By.xpath(xpathForFileDropDown));
         
-        Select fileOption = new Select(fileDropDown);
-        fileOption.selectByVisibleText("ui.jQuery.js");
+        fileDropDown.click();
+        a.click(fileDropDown);
+        a.sendKeys(Keys.ARROW_DOWN).build().perform();
+        a.sendKeys(Keys.ENTER).build().perform(); 
         
         
-        String xpathForNumberDropDown = "//select[@id='number'][@name='number']";     
+        String xpathForNumberDropDown = "(//span[@class='ui-selectmenu-icon ui-icon ui-icon-triangle-1-s'])[3]";     
         WebElement numberDropDown = driver.findElement(By.xpath(xpathForNumberDropDown));
         
-        Select numberOption = new Select(numberDropDown);
-        numberOption.selectByVisibleText("ui.jQuery.js");
+        numberDropDown.click();
+        a.click(numberDropDown);
+        a.sendKeys(Keys.ARROW_DOWN).build().perform();
+        a.sendKeys(Keys.ARROW_DOWN).build().perform();
+        a.sendKeys(Keys.ENTER).build().perform(); 
         
-        String xpathForTitleDropDown = "//select[@id='number'][@name='number']";     
+        
+        String xpathForTitleDropDown = "(//span[@class='ui-selectmenu-icon ui-icon ui-icon-triangle-1-s'])[4]";     
         WebElement titleDropDown = driver.findElement(By.xpath(xpathForTitleDropDown));
         
-        Select titleOption = new Select(titleDropDown);
-        titleOption.selectByVisibleText("//select[@id='salutation'][@name='salutation']");
+        titleDropDown.click();
+        a.click(titleDropDown);
+        a.sendKeys(Keys.ARROW_DOWN).build().perform();
+        a.sendKeys(Keys.ARROW_DOWN).build().perform();
+        a.sendKeys(Keys.ENTER).build().perform(); 
         
         
-            
+       
+        
+        driver.quit();
+             
 		
 		
 	}
