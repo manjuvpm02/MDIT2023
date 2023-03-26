@@ -16,7 +16,7 @@ public class Week4Assignment3 {
 	public static void main(String [] args) throws Exception
 	{
 		
-		String[] colorsToSelect = { "Red","Blue","Purple" };
+		String[] colorsToSelect = { "red","blue","purple" };
 		
 		ChromeOptions options=new ChromeOptions();
     	options.addArguments("--remote-allow-origins=*");
@@ -30,29 +30,31 @@ public class Week4Assignment3 {
         js.executeScript("window.scrollBy(0,200)");  
 
 		List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@name='color']"));
-		//System.out.println("Number of Check boxes : "+ Integer.toString(checkboxes.size()));
-		//List<String> colorsToSelectList = Arrays.asList(colorsToSelect);
-		
+		//System.out.println("Number of Check boxes : "+ Integer.toString(checkboxes.size()));		
 		for (WebElement element : checkboxes) {
 			
+			//System.out.println("Inside for each");
 			
-			if((element.getAttribute("value"))== "Red")
-			{
+			//String actualValue=element.getAttribute("value");
+			
+			//System.out.println(actualValue);
+
+			//if ((actualValue.contains("red"))||(actualValue.contains("blue"))||(actualValue.contains("purple")))
+			//{
+				//element.click();
+			//}			
+			
+			if (Arrays.asList(colorsToSelect).contains(element.getAttribute("value").trim())) {
 				element.click();
 			}
-			
-			//for(int i=0;i<3;i++) {
-				
-			
-	
-			//if(Arrays.asList(colorsToSelect[i]).contains(element.getAttribute("value")))
-					//{
-			
-						//element.click();
-					//}
-			//}
 		}
-        
+			
+		
+		Thread.sleep(2000);
+		driver.quit(); 
+
+		
+		
 	}
 
 }
