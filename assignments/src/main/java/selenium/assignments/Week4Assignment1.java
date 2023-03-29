@@ -12,7 +12,7 @@ public class Week4Assignment1 {
 	
     public static void main(String[] args) throws Exception {
     	
-    	String dateInput="8-Mar-2023";
+    	String dateInput="9-Mar-2023";
     	
     	String dateNo=dateInput.split("-")[0];    	
     	String month=dateInput.split("-")[1];

@@ -60,6 +60,8 @@ public class Week4Assignment4{
 		}
 		takeScreenShot(driver,generateDateTime());
 		Shutterbug.shootPage(driver, Capture.FULL_SCROLL).save("screenshots");
+		
+		driver.quit();
 
 	}
 	    
