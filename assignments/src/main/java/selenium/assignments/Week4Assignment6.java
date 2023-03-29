@@ -48,8 +48,7 @@ public class Week4Assignment6 {
 		System.out.println(elements.getText());
 		elements = driver.findElement(By.xpath("(//form)[2]"));
 		System.out.println(elements.getText());
-       
-		
+ 
 		
 		Thread.sleep(2000);
         driver.quit();
