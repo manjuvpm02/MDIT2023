@@ -15,8 +15,8 @@ public class Week4Assignment1 {
     	String dateInput="9-Mar-2023";//Date input, this an be changed as per the need
     	
     	String dateNo=dateInput.split("-")[0];  //splitting the dateinput to take out date number separately  	
-    	String month=dateInput.split("-")[1];
-    	String year=dateInput.split("-")[2];
+    	//String month=dateInput.split("-")[1];
+    	//String year=dateInput.split("-")[2];
 
 
     	ChromeOptions options=new ChromeOptions(); 
