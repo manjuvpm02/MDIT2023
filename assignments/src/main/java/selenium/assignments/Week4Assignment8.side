@@ -1,0 +1,92 @@
+{
+  "id": "91f1f83e-1f85-4e37-9905-1af3bfd517c3",
+  "version": "2.0",
+  "name": "Week4Assignment8",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "484463b5-5fc9-4cbe-8c49-d2291bc9fcd2",
+    "name": "Checking3rdResult",
+    "commands": [{
+      "id": "77381e3b-93af-4df4-a996-6874062673e9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e01c9635-61b8-4302-817b-72106356c114",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x703",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d992aa3d-4582-486f-b90c-c1c70c784ac0",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "automation testing selenium"
+    }, {
+      "id": "38e699b8-d073-4414-b2c5-6763a8a5140c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7e3d0f7f-e305-4b02-bd3c-c5b8189c67f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(10) .yuRUbf",
+      "targets": [
+        ["css=.g:nth-child(10) .yuRUbf", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf4ea599-2a71-494b-8955-a4fdcf304977",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(10) .yuRUbf",
+      "targets": [
+        ["css=.g:nth-child(10) .yuRUbf", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67af41d6-d2de-4511-be3c-6a341656c723",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.g:nth-child(10) .iTPLzd",
+      "targets": [
+        ["css=.g:nth-child(10) .iTPLzd", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/div/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7c2215b9-aaea-4595-a40f-8f3c49fd7373",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["484463b5-5fc9-4cbe-8c49-d2291bc9fcd2"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
